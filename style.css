@@ -53,43 +53,60 @@ main {
     margin-bottom: 10px;
 }
 
-/* Seção de Depoimentos */
+/* Seção de Depoimentos - Refatorada e Centralizada */
 .testimonials {
-    background-color: #eee;
-    padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
 }
 
-.testimonials p {
-    font-style: italic;
+.testimonials h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Call to Action */
-.cta {
-    text-align: center;
-    margin-top: 20px;
+.testimonial-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.cta button {
-    padding: 10px 20px;
+.testimonial-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.testimonial-carousel::-webkit-scrollbar-thumb {
     background-color: #2196F3;
-    color: white;
-    border: none;
-    cursor: pointer;
+    border-radius: 4px;
 }
 
-.cta button:hover {
-    background-color: #1976D2;
+.testimonial {
+    flex: 0 0 280px;
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    font-style: italic;
+    color: #444;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+.testimonial span {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-style: normal;
+    color: #2196F3;
+    text-align: right;
+    font-size: 0.9rem;
 }
+
 /* Call to Action */
 .cta {
     text-align: center;
@@ -111,4 +128,12 @@ footer {
 
 .cta button:hover {
     background-color: #1976D2;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
